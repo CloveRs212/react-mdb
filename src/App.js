@@ -1,11 +1,9 @@
-import React from 'react';
+import React, { startTransition } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      Start here.
-    </div>
-  );
+const Star = () => React.createElement('div', null, 'This is a little star');
+
+const  App = () => {
+  return Star();
 }
 
 export default App;
