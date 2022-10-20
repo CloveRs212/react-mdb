@@ -1,9 +1,18 @@
-import React, { startTransition } from 'react';
+import React from 'react';
+//components
+import Header from './components/Header';
 
-const Star = () => React.createElement('div', null, 'This is a little star');
+//styles
+import { GlobalStyle } from './GlobalStyle'
 
-const  App = () => {
-  return Star();
+function App() {
+  return (
+  <div classname="App">
+    <Header />
+    Start here.
+    <GlobalStyle />
+  </div>
+  );
 }
 
 export default App;
