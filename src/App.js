@@ -7,11 +7,11 @@ import { GlobalStyle } from './GlobalStyle'
 
 function App() {
   return (
-  <div classname="App">
-    <Header />
-    Start here.
-    <GlobalStyle />
-  </div>
+    <div classname="App">
+      <Header />
+      Start here.
+      <GlobalStyle />
+    </div>
   );
 }
 
