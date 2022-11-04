@@ -1,16 +1,13 @@
-import React, { useState, useEffect } from 'react'
-//API
-import API from '../API';
-
+import React from 'react'
 // Config
 import { POSTER_SIZE, BACKDROP_SIZE, IMAGE_BASE_URL } from '../config';
-
 // Components 
 import HeroImage from './HeroImage/image';
-
+import Grid from './Grid';
+import Thumb from './Thumb';
+import Spinner from './Spinner';
 // Hook
-import { useHomeFetch } from '../hooks/useMovieFetch'
-
+import { useHomeFetch } from '../hooks/useMovieFetch';
 // Images
 import NoImage from '../images/no_image.jpg';
 
@@ -28,6 +25,21 @@ const Home = () => {
                 text={state.results[0].overview}
                 />
         ) : null}
+        <Grid header='Popular Movies'>
+          {state.results.map(movie => (
+            <Thumb
+              Key={movieId}
+              clickable
+              image={
+                movie.poster_path
+                  ? IMAGE_BASE_URL + POSTER_SIZE + movie.poster_path
+                  : NoImage
+              }
+              movieId={movie.id}
+              />
+          ))}
+        </Grid>
+        <Spinner />
     </>
   );
 };
