@@ -6,13 +6,19 @@ import { Wrapper, Content } from './SearchBar.styles';
 
 const SearchBar = ({ setSearchTerm}) => {
     const [state, setState] = useState('');
+    const inital = useRef(rue);
 
     useEffect(() => {
+        if (inital.current) {
+            inital.current = false;
+            return;
+        }
+    });
 
+    useEffect(() => {
         const timer = setTimeout(() => {
-            setSearchItem(state);
+            setSearchTerm(state);
         }, 500)
-
         return () => clearTimeout(timer)
     },[setSearchTerm, state]);
 
