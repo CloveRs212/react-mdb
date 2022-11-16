@@ -1,4 +1,6 @@
 import React from 'react';
+//Routing
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 //components
 import Header from './components/Header';
 import Home from './components/Home'
@@ -6,15 +8,12 @@ import Home from './components/Home'
 //styles
 import { GlobalStyle } from './GlobalStyle'
 
-function App() {
-  return (
-    <div classname="App">
+const App = () => (
+  <Router>
       <Header />
       <Home />
-      Start here.
       <GlobalStyle />
-    </div>
-  );
-}
+  </Router>
+);
 
 export default App;
