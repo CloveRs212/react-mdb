@@ -22,9 +22,7 @@ export const useHomeFetch = () => {
         try {
             setError(false);
             setLoading(true);
-
             const movies = await API.fetchMovies(searchTerm, page);
-
             setState(prev => ({
                 ...movies,
                 results:
@@ -35,7 +33,6 @@ export const useHomeFetch = () => {
         }
         setLoading(false);
     };
-
     // Load More
     useEffect(() => {
         if(!isLoadingMore) return;
