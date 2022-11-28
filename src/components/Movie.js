@@ -39,7 +39,7 @@ const Movie = () => {
                     character={actor.character}
                     imageUrl={
                         actor.profile_path
-                        ? `${IMAGE_BASE_URL}${POSTER_SIZE}${actor.profile_path00}`
+                        ? `${IMAGE_BASE_URL}${POSTER_SIZE}${actor.profile_path}`
                         : NoImage
                     }
                 />
@@ -49,4 +49,4 @@ const Movie = () => {
     );
 };
 
-export default Movie;
+export default Movie;  
