@@ -5,7 +5,7 @@ import Thumb from '../Thumb';
 //config
 import { IMAGE_BASE_URL, POSTER_SIZE } from '../../config';
 // Image
-import NoImage from '../../images/no_image';
+import NoImage from '../../images/no_image.jpg';
 // Styles
 import { Wrapper, Content, Text } from './MovieInfo.styles';
 
@@ -47,4 +47,4 @@ MovieInfo.propTypes = {
     movie: PropTypes.object
 };
 
-export default MovieInfos;
+export default MovieInfo;

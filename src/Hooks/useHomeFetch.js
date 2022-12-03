@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 //API
-import API from './API'
+import API from '../API';
 //Helpers
 import { isPersistedState } from '../helpers';
 

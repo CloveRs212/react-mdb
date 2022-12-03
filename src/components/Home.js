@@ -2,14 +2,14 @@ import React from 'react'
 // Config
 import { POSTER_SIZE, BACKDROP_SIZE, IMAGE_BASE_URL } from '../config';
 // Components 
-import HeroImage from './HeroImage/image';
+import HeroImage from './HeroImage';
 import Grid from './Grid';
 import Thumb from './Thumb';
 import Spinner from './Spinner';
 import SearchBar from './SearchBar';
 import Button from './Button';
 // Hook
-import { useHomeFetch } from '../hooks/useMovieFetch';
+import { useHomeFetch } from '../Hooks/useHomeFetch';
 // Images
 import NoImage from '../images/no_image.jpg';
 
@@ -33,14 +33,14 @@ const Home = () => {
         <Grid header={searchTerm ? 'Search Result' : 'Popular Movies'}>
           {state.results.map(movie => (
             <Thumb
-              Key={movieId}
+              movieId={movie.id}
+              Key={movie}
               clickable
               image={
                 movie.poster_path
                   ? IMAGE_BASE_URL + POSTER_SIZE + movie.poster_path
                   : NoImage
               }
-              movieId={movie.id}
               />
           ))}
         </Grid>
