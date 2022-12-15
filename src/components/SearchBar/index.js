@@ -24,7 +24,7 @@ const SearchBar = ({ setSearchTerm}) => {
     },[setSearchTerm, state]);
 
     return (
-        <wrapper>
+        <Wrapper>
             <Content>
                 <img src={searchIcon} alt='search-icon' />
                 <input 
@@ -34,7 +34,7 @@ const SearchBar = ({ setSearchTerm}) => {
                     value={state} 
                 />
             </Content>
-        </wrapper>
+        </Wrapper>
     );
 };
 
